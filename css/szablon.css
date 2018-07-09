@@ -1,0 +1,369 @@
+@font-face {
+    font-family:numberFont;
+    src: url(../fonts/digital-7.mono.ttf)format('truetype');
+
+}
+@media only screen and (max-width: 575px) {
+    #main-panel{
+        width: 271px;
+        height:271px;
+    }
+    .menuPanelWidth{
+        width:48%;
+    }
+    .menuPanelWidth img{
+
+        width:100% !important;
+    }
+    #board{
+        width:250px;
+        margin-left: 11px;
+        margin-top: 11px;
+    }
+    .levelAndTypeSelect{
+        width:110px;
+        height:30px;
+        font-size:10px;
+    }
+}
+@media only screen and (min-width: 576px) {
+    #main-panel{
+        width: 350px;
+        height:350px;
+    }
+    #left-panel{
+        width:185px;
+        font-size:11px;
+    }
+    .menuPanelWidth{
+        width:288px;
+    }
+    #board{
+        width:325px;
+        margin-left: 15px;
+        margin-top: 15px;
+    }
+    #infoGameLabelContainer,#levelContainer,#resultsContainer,#stopGameContainer{
+        height:30px;
+        line-height: 30px;
+        padding:0 10px;
+    }
+    #timerContainer,#scoreContainer{
+        height:30px;
+    }
+    #timerContainer,#scoreContainer{
+        height: 36px;
+    }
+    #stopGameContainer{
+        margin-top:35px;
+    }
+    #scoreContainer{
+        margin:12px 0;
+    }
+    #levelContainer{
+        margin:7px 0;
+    }
+    #scoreContainer .topText,#timerContainer .topText{
+        font-size:29px;
+        margin-bottom: -2px;
+    }
+    #bigTextStartGame{
+        text-transform: uppercase;
+        font-weight: bold;
+        font-size: 12px;
+        letter-spacing: 2px;
+    }
+    #smallTextStartGame{
+        letter-spacing: 1px !important;
+        font-size: 9px;
+    }
+    #imgStartGame img{
+        height:35px !important;
+        width:50px !important;
+    }
+    .menuButtons{
+        height:40px;
+    }
+    .levelAndTypeSelect{
+        width:140px;
+        font-weight: bold !important;
+    }
+    #soundToggle{
+        background: #017ba8 ;
+        width: 40px;
+    }
+}
+@media only screen and (min-width: 768px) {
+    #left-panel,#right-panel,#main-panel{
+        margin-top: 20px;
+    }
+    #left-panel,#right-panel{
+        width:200px;
+        font-size:13px;
+    }
+    #main-panel{
+        width: 360px;
+        height:360px;
+    }
+    .menuPanelWidth{
+        width: 380px;
+    }
+    #board{
+        width:330px;
+        margin-left: 16px;
+        margin-top: 16px;
+    }
+    #infoGameLabelContainer,#top10ResultsLabelContainer, #levelContainer,#resultsContainer, #stopGameContainer{
+        height: 40px;
+        line-height: 40px;
+        padding:0 10px;
+    }
+    #timerContainer,#scoreContainer{
+        height: 48px;
+    }
+    #stopGameContainer{
+        margin-top:45px;
+    }
+    #top10Results1-3Container{
+        height:68px;
+        margin:7px 0;
+    }
+    #top10Results4-10Container{
+
+        height:124px;
+    }
+    #scoreContainer{
+        margin:12px 0;
+    }
+    #levelContainer{
+        margin:7px 0;
+    }
+    #scoreContainer .topText,#timerContainer .topText{
+        font-size:35px;
+    }
+    #bigTextStartGame{
+        text-transform: uppercase;
+        font-weight: bold;
+        font-size: 16px;
+        letter-spacing: 3px;
+    }
+    #smallTextStartGame{
+        letter-spacing: 2px !important;
+        font-size: 11px;
+    }
+    #imgStartGame img{
+        height:70px !important;
+        width:100px !important;
+    }
+}
+@media only screen and (min-width: 992px) {
+    #left-panel,#right-panel,#main-panel{
+        margin-top: 30px;
+        font-size:15px;
+    }
+    #left-panel,#right-panel{
+        width:240px;
+    }
+    #main-panel{
+        width: 481px;
+        height:481px;
+    }
+    .menuPanelWidth{
+
+        width: 480px;
+    }
+    #board{
+        width:445px;
+        margin-left: 21px;
+        margin-top: 21px;
+    }
+    #infoGameLabelContainer,#top10ResultsLabelContainer, #levelContainer,#resultsContainer, #stopGameContainer{
+        height: 50px;
+        line-height: 50px;
+    }
+    #timerContainer,#scoreContainer{
+        height: 60px;
+    }
+    #stopGameContainer{
+        margin-top:60px;
+    }
+    #top10Results1-3Container{
+        height:85px;
+        margin:10px 0;
+    }
+    #top10Results4-10Container{
+        height:155px;
+    }
+    #scoreContainer{
+        margin:12px 0;
+    }
+    #levelContainer{
+        margin:7px 0;
+    }
+    #scoreContainer .topText,#timerContainer .topText{
+        font-size:46px;
+    }
+    #bigTextStartGame{
+        text-transform: uppercase;
+        font-weight: bold;
+        font-size: 20px;
+        letter-spacing: 3px;
+    }
+    #smallTextStartGame{
+        letter-spacing: 2px;
+        font-size: 15px;
+    }
+    #imgStartGame img{
+        height:80px !important;
+        width:125px !important;
+    }
+
+}
+@media only screen and (min-width:1200px) {
+    #left-panel,#right-panel,#main-panel{
+        margin-top: 30px;
+    }
+    #left-panel,#right-panel{
+        width:250px;
+        font-size:16px;
+    }
+    #main-panel{
+        width: 606px;
+        height:606px;
+        font-size:30px;
+    }
+    .menuPanelWidth{
+        width: 550px;
+
+    }
+    #board{
+        width:560px;
+        margin-left: 27px;
+        margin-top: 27px;
+    }
+    #infoGameLabelContainer,#top10ResultsLabelContainer, #levelContainer,#resultsContainer, #stopGameContainer{
+        height: 50px;
+        line-height: 50px;
+    }
+    #timerContainer,#scoreContainer{
+        height: 60px;
+    }
+    #stopGameContainer{
+        margin-top:60px;
+    }
+    #top10Results1-3Container{
+        height:85px;
+        margin:10px 0;
+    }
+    #top10Results4-10Container{
+        height:155px;
+    }
+    #scoreContainer{
+        margin:12px 0;
+    }
+    #levelContainer{
+        margin:7px 0;
+    }
+    #scoreContainer .topText,#timerContainer .topText{
+        font-size:46px;
+    }
+    #bigTextStartGame{
+        text-transform: uppercase;
+        font-weight: bold;
+        font-size: 22px;
+        letter-spacing: 3px;
+    }
+    #smallTextStartGame{
+        letter-spacing: 2px;
+        font-size: 16px;
+    }
+    #imgStartGame img{
+        height:85px !important;
+        width:138px !important;
+    }
+}
+.leftText{
+    font-weight:bold;
+    vertical-align: middle;
+}
+#right-panel,#left-panel,#menu{
+    font-family: 'Titillium Web', sans-serif;
+}
+#scoreContainer .bottomText,#timerContainer .bottomText,#scoreContainer .topText,#timerContainer .topText{
+    line-height: 75%;
+    vertical-align: middle;
+}
+#main-panel{
+    position: relative;
+}
+#main-panel .mainElement{
+    position: absolute;
+    top:0;
+}
+#main-panel .mainElement img,#main-panel .mainElement{
+    width: 100%;
+    height:100%;
+}
+#main-panel #redElem{
+
+    opacity:0.9;
+}
+#infoGameLabelContainer,.infoGameLabel,#scoreContainer{
+    background: #215878 !important;
+}
+#timerContainer{
+    background: black;
+}
+#timerContainer,#scoreContainer{
+    font-family:numberFont;
+}
+#stopGameContainer,.stopGame,#main-panel #redElem,#type{
+    background: #d0514d !important;
+}
+#top10ResultsLabelContainer,.top10ResultsLabel,#resultsContainer,.results{
+    background:#8d8d8d !important;
+}
+#top10Results1-3Container{
+    background:#f4d0d0;
+}
+#top10Results4-10Container{
+    background:#e4e2e3;
+}
+#level{
+    background:#cbca52;
+
+}
+
+.custom-div{
+    color:white;
+}
+.elemPanel{
+    border-radius:6px;
+}
+#menu{
+    height:16vh;
+    background:#215878;
+
+}
+.vertical-align {
+    display: flex;
+    align-items: center;
+}
+#bigTextStartGame{
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+#board{
+    border:0 !important;
+    position: absolute
+}
+.board-b72b1{
+    border:0px;
+}
+.notation-322f9{
+    display:none;
+}
+.square-55d63{
+    background: transparent;
+}

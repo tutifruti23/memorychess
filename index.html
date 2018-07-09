@@ -8,6 +8,14 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js" integrity="sha384-uefMccjFJAIv6A+rW+L4AHf99KvxDjWSu1z9VI8SKNVmz4sk7buKt/6v9KI65qnm" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="css/chessboard.css" />
     <script src="js/chessboard.js"></script>
+    <script src="js/binding.js"></script>
+    <script src="js/easy.js"></script>
+    <script src="js/medium.js"></script>
+    <script src="js/hard.js"></script>
+    <script src="js/timer.js"></script>
+    <script src="js/game.js"></script>
+    <script src="js/boardEvents.js"></script>
+    <script src="js/szablon.js"></script>
     <meta charset="UTF-8">
     <title>Game</title>
 </head>
@@ -20,7 +28,27 @@
         </div>
         <div class="row">
             <div class="col-8 offset-4">
-
+                <select id="type">
+                    <option value=0>No limit</option>
+                    <option value=30>30sec</option>
+                    <option value=120>2min</option>
+                    <option value=300>5min</option>
+                </select>
+                <select id="level">
+                    <option value="easy">easy</option>
+                    <option value="medium">medium</option>
+                    <option value="hard">hard</option>
+                </select>
+                <div id='newGame' class="btn btn-primary">New game</div>
+                <div id='startGame' class="btn btn-primary">Start game</div>
+                <div class="row">
+                    <div class="col-6">
+                        Time:<span id="time"></span>
+                    </div>
+                    <div class="col-6">
+                        Points:<div id="points">0</div>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
