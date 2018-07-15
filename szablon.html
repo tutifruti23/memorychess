@@ -30,11 +30,11 @@
         </div>
         <div class="menuPanelWidth">
             <div class="d-flex flex-wrap justify-content-end">
-                <div class="dropdown p-2">
+                <div class="dropdown p-2 ">
                     <button class="btn btn-secondary dropdown-toggle levelAndTypeSelect menuButtons vertical-align h-100" type="button" id="type" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                         Rodzaj gry
                     </button>
-                    <div class="dropdown-menu " aria-labelledby="type">
+                    <div class="dropdown-menu" aria-labelledby="type">
                         <a class="dropdown-item typeOption" href="#" name="0">Bez limitu</a>
                         <a class="dropdown-item typeOption" href="#" name="60">1 min</a>
                         <a class="dropdown-item typeOption" href="#" name="120">2 min</a>
@@ -45,7 +45,7 @@
                         Poziom
                     </button>
                     <div class="dropdown-menu" aria-labelledby="level">
-                        <a class="dropdown-item levelOption" name='easy' href="#">Łatwy</a>
+                        <a class="dropdown-item levelOption"  name='easy' href="#">Łatwy</a>
                         <a class="dropdown-item levelOption" name='medium' href="#">Sredni</a>
                         <a class="dropdown-item levelOption" name='hard' href="#">Trudny</a>
                     </div>
@@ -58,17 +58,16 @@
             </div>
         </div>
     </div>
-</div>
-<div class="w-100"></div>
+</div><div class="w-100"></div>
     <div class="container-fluid  .center-block" id='whole'>
         <div class="row">
-            <div class="d-flex  mx-auto justify-content-center">
-                <div class="p-2 d-none d-sm-block" >
-                    <div class="custom-div" id="left-panel">
-                        <div class="col">
+            <div class="d-flex  mx-auto justify-content-center flex-row-reverse flex-md-row flex-wrap-reverse flex-sm-nowrap">
+                <div class="p-2 " >
+                    <div class="custom-div row" id="left-panel">
+                        <div class="col-12 d-none d-sm-block">
                              <div id='infoGameLabelContainer' class="elemPanel">
-                                 <div class="d-flex">
-                                     <div class="leftText">
+                                 <div class="d-flex w-100">
+                                     <div class="leftText w-100">
                                          TWOJA GRA:
                                      </div>
 
@@ -76,12 +75,12 @@
 
                              </div>
                         </div>
-                        <div class="col">
+                        <div class="col d-none d-sm-block">
                                 <div class="elemPanel" id="levelContainer"></div>
                         </div>
-                        <div class="col">
-                            <div id="timerContainer" class="elemPanel">
-                                <div class="d-flex flex-column h-100  ">
+                        <div class="col-5 col-sm-12 margin-xs ">
+                            <div id="timerContainer" class="elemPanel ">
+                                <div class="d-flex flex-column h-100">
                                     <div  id="time" class="topText align-self-top h-75 text-center ">
                                         0
                                     </div>
@@ -91,9 +90,9 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="col">
-                            <div id="scoreContainer" class="elemPanel">
-                                <div class="d-flex flex-column h-100">
+                        <div class="col-5 col-sm-12 margin-xs">
+                            <div id="scoreContainer" class="elemPanel  ">
+                                <div class="d-flex flex-column h-100 ">
                                     <div id='points' class="topText align-self-top h-75 text-center">
                                         0
                                     </div>
@@ -103,7 +102,7 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="col">
+                        <div class="col d-none d-sm-block">
                              <div id="resultsContainer" class="elemPanel">
                                  <div class="d-flex h-100 justify-content-between">
                                      <div class="leftText">
@@ -115,11 +114,11 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="col">
-                            <div class="elemPanel" id="stopGameContainer">
+                        <div class="col-2 col-sm-12 margin-xs ">
+                            <div class="elemPanel " id="stopGameContainer">
 
-                                <div class="d-flex h-100 justify-content-between" id="stopGame">
-                                    <div class="leftText ">
+                                <div class="d-flex h-100 justify-content-center justify-content-sm-between " id="stopGame">
+                                    <div class="leftText d-none d-sm-block">
                                         <span>ZAKOŃCZ GRĘ</span>
                                     </div>
                                     <div class="rightElement ">

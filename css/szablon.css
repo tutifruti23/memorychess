@@ -5,8 +5,13 @@
 }
 @media only screen and (max-width: 575px) {
     #main-panel{
-        width: 271px;
-        height:271px;
+        width: 280px;
+        height:280px;
+    }
+    #left-panel {
+        width: 280px;
+        margin-left: 10px;
+        margin-right: 10px;
     }
     .menuPanelWidth{
         width:48%;
@@ -16,14 +21,47 @@
         width:100% !important;
     }
     #board{
-        width:250px;
-        margin-left: 11px;
-        margin-top: 11px;
+        width:264px;
+        margin-left:12px;
+        margin-top: 12px;
+    }
+    #stopGameContainer,#timerContainer,#scoreContainer{
+        height:40px;
+    }
+    #infoGameLabelContainer,#levelContainer,#resultsContainer,#stopGameContainer{
+        height:40px;
+        line-height: 40px;
+        padding:0 2px;
+        font-size:10px;
+    }
+    #timerContainer,#scoreContainer{
+
+
+    }
+    #scoreContainer .topText,#timerContainer .topText{
+        font-size:30px;
+
+    }
+    .elemPanel{
+        border-radius:0px !important;
+    }
+    #scoreContainer .bottomText,#timerContainer .bottomText{
+        font-size:14px;
+
+        padding-bottom: 2px;
     }
     .levelAndTypeSelect{
         width:110px;
         height:30px;
         font-size:10px;
+    }
+    .margin-xs{
+        margin:0 !important;
+        padding:0 !important;
+    }
+    #menu{
+        min-height: 96px;
+        min-width: 300px;
     }
 }
 @media only screen and (min-width: 576px) {
@@ -87,10 +125,14 @@
     .levelAndTypeSelect{
         width:140px;
         font-weight: bold !important;
+        height:30px;
     }
     #soundToggle{
         background: #017ba8 ;
         width: 40px;
+    }
+    #menu{
+        min-height: 96px;
     }
 }
 @media only screen and (min-width: 768px) {
@@ -364,6 +406,17 @@
 .notation-322f9{
     display:none;
 }
-.square-55d63{
-    background: transparent;
+.black-3c85d{
+    background:#3e708e;
+
 }
+.white-1e1d7{
+    background: white;
+}
+.dropdown-menu {
+    min-width:140px !important;
+
+    border-radius: 6px;
+
+}
+
