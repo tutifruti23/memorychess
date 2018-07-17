@@ -17,6 +17,7 @@ function Timer(cfg){
                 handler.stop();
                 onEnd();
             }else{
+
                 onTime(time);
                 time-=interval;
                 if(time<=timeCloseEnd&&time+interval>timeCloseEnd)
@@ -34,5 +35,6 @@ function Timer(cfg){
     };
     this.addTime=function(miliseconds){
         time+=miliseconds;
+        gameProperties.gameTime=time;
     };
 }

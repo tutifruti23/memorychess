@@ -49,16 +49,45 @@ let GameMethods=function(idBoard){
     const cfg={
         position:'start'
     };
-    let binding=new Binding();
+    this.levels = [
+        {name: 'easy', value: 'easy'},
+        {name: 'medium', value: 'medium'},
+        {name: 'hard', value: 'hard'}
+    ];
+    this.types = [
+        {name: 'Bez limitu', value: 0},
+        {name: '1 min', value: 60},
+        {name: '2 mins', value: 120}
+    ];
     let handler=this;
     let clickedSquares;
-    this.points;
     let numberOfAvailableCapture=0,numberOfGoodCapture=0;
     let boardEvents=new BoardEvents(idBoard,cfg);
     let fens;
     let fensLenght;
-    this.blockBoard=function(){
+    let blockBoard=function(){
         boardEvents.clearBoard();
+    };
+    this.onStart=function(){
+        console.log('start');
+    };
+    this.onEnd=function(){
+        blockBoard();
+    };
+    this.onCloseToEnd=function() {
+        console.log('bliski koniec');
+    };
+    this.isTimeGame=function(level,type){
+        return type===0;
+    };
+    this.gameTime=function(level,type){
+        return type*1000;
+    };
+    this.interval=function(){
+        return 1000;
+    };
+    this.onCloseToEndTime=function(){
+        return 10000;
     };
     let onClickSquare=function(squareEl,index){
         if(clickedSquares.find(x=>x===index)===undefined){
@@ -68,13 +97,12 @@ let GameMethods=function(idBoard){
             if(result===1){
                 background='green';
                 numberOfGoodCapture++;
-                handler.points++;
+                gameProperties.gameScore++;
             }else if(result===-1){
                 background='red';
-                handler.points--;
+                gameProperties.gameScore--;
             }
             squareEl.css('background', background);
-            binding.updateResult(handler.points);
             if(numberOfGoodCapture===numberOfAvailableCapture)
                 newPosition();
         }
@@ -86,7 +114,7 @@ let GameMethods=function(idBoard){
         numberOfGoodCapture=0;
         numberOfAvailableCapture=boardEvents.numberOfAvailableCaptures();
     };
-    this.endlessGenerate=function(level){
+    this.onStart=function(level){
         fens=level==='easy'?easyFens:level==='medium'?mediumFens:hardFens;
         fensLenght=fens.length;
         numberOfAvailableCapture=0;
@@ -94,7 +122,7 @@ let GameMethods=function(idBoard){
         while(numberOfAvailableCapture===numberOfGoodCapture){
             newPosition();
         }
-    }
+    };
     this.redrawBoard=function(){
         boardEvents.redrawBoard();
     };

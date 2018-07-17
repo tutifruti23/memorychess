@@ -105,17 +105,17 @@
         font-size:29px;
         margin-bottom: -2px;
     }
-    #bigTextStartGame{
+    .bigTextPanelGame{
         text-transform: uppercase;
         font-weight: bold;
         font-size: 12px;
         letter-spacing: 2px;
     }
-    #smallTextStartGame{
+    .smallTextPanelGame{
         letter-spacing: 1px !important;
         font-size: 9px;
     }
-    #imgStartGame img{
+    .imgPanelGame img{
         height:35px !important;
         width:50px !important;
     }
@@ -183,17 +183,17 @@
     #scoreContainer .topText,#timerContainer .topText{
         font-size:35px;
     }
-    #bigTextStartGame{
+    .bigTextPanelGame{
         text-transform: uppercase;
         font-weight: bold;
         font-size: 16px;
         letter-spacing: 3px;
     }
-    #smallTextStartGame{
+    .smallTextPanelGame{
         letter-spacing: 2px !important;
         font-size: 11px;
     }
-    #imgStartGame img{
+    .imgPanelGame img{
         height:70px !important;
         width:100px !important;
     }
@@ -245,17 +245,17 @@
     #scoreContainer .topText,#timerContainer .topText{
         font-size:46px;
     }
-    #bigTextStartGame{
+    .bigTextPanelGame{
         text-transform: uppercase;
         font-weight: bold;
         font-size: 20px;
         letter-spacing: 3px;
     }
-    #smallTextStartGame{
+    .smallTextPanelGame{
         letter-spacing: 2px;
         font-size: 15px;
     }
-    #imgStartGame img{
+    .imgPanelGame img{
         height:80px !important;
         width:125px !important;
     }
@@ -294,11 +294,11 @@
         margin-top:60px;
     }
     #top10Results1-3Container{
-        height:85px;
+        height:75px;
         margin:10px 0;
     }
     #top10Results4-10Container{
-        height:155px;
+        height:165px;
     }
     #scoreContainer{
         margin:12px 0;
@@ -309,17 +309,17 @@
     #scoreContainer .topText,#timerContainer .topText{
         font-size:46px;
     }
-    #bigTextStartGame{
+    .bigTextPanelGame{
         text-transform: uppercase;
         font-weight: bold;
         font-size: 22px;
         letter-spacing: 3px;
     }
-    #smallTextStartGame{
+    .smallTextPanelGame{
         letter-spacing: 2px;
         font-size: 16px;
     }
-    #imgStartGame img{
+    .imgPanelGame img{
         height:85px !important;
         width:138px !important;
     }
@@ -346,11 +346,14 @@
     width: 100%;
     height:100%;
 }
-#main-panel #redElem{
+#main-panel .coverPanel{
 
     opacity:0.9;
 }
-#infoGameLabelContainer,.infoGameLabel,#scoreContainer{
+#redElem{
+
+}
+#infoGameLabelContainer,.infoGameLabel,#scoreContainer,#main-panel #blueElem{
     background: #215878 !important;
 }
 #timerContainer{
@@ -391,11 +394,10 @@
     display: flex;
     align-items: center;
 }
-#bigTextStartGame{
+.bigTextPanelGame{
     text-transform: uppercase;
     font-weight: bold;
 }
-
 #board{
     border:0 !important;
     position: absolute
@@ -419,4 +421,49 @@
     border-radius: 6px;
 
 }
+.dropdown-menu,.dropdown-item{
+    background-color: #525252 !important;
+    color:white !important;
+    text-align: center !important;
+    border-radius: 6px;
+    text-transform: uppercase !important;
 
+}
+.levelAndTypeSelect,.dropdown-item{
+    text-transform: uppercase !important;
+    font-size: 13px !important;
+}
+.dropdown-item:hover{
+    font-weight: bold !important;
+    cursor: pointer;
+
+}
+
+.number{
+    font-weight: bold;
+}
+.number1_3{
+    color:#d0514d;
+}
+.best-scores{
+    font-family: 'Titillium Web', sans-srif;
+    color:black;
+}
+.clickable:hover{
+    cursor: pointer;
+}
+
+.coverPanelLink{
+    color:white;
+}
+.coverPanelLink:hover{
+    color:#ddd;
+}
+.divider{
+    width:80%;
+    border-top:1px solid rgba(0,0,0,0.8);
+    border-bottom:1px solid rgba(255,255, 255, 0.4);
+}
+.body{
+    font-family: 'Titillium Web', sans-serif;
+}

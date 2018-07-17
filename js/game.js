@@ -1,21 +1,14 @@
 let Game=function(){
     let handler=this;
     let timer;
-    this.type=0;
-    this.level='easy';
     this.inProgress=false;
     this.startGame=function(noTime,params){
         if(!handler.inProgress){
             handler.inProgress=true;
             params.onStart();
-            if(noTime)
-                unlimitedGame(params);
-            else
+            if(!noTime)
                 timeGame(params);
         }
-    };
-    let unlimitedGame=function(params){
-        params['play']();
     };
     let timeGame=function(params){
         let cfg={
@@ -28,7 +21,6 @@ let Game=function(){
         };
         timer=new Timer(cfg);
         timer.start();
-        params['play']();
     };
     this.newGame=function(){
         handler.inProgress=false;
@@ -37,6 +29,7 @@ let Game=function(){
     };
     this.endOfGame=function(exec){
         handler.newGame();
+        gameProperties.endOfGame();
         if(exec!==undefined)
             exec();
     };
