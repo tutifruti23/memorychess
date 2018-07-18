@@ -45,7 +45,7 @@ let BoardEvents=function(idBoard,cfg){
     };
     board = ChessBoard(idBoard, cfg);
 };
-let GameMethods=function(idBoard){
+let GameMethodsAllCaptures=function(idBoard){
     const cfg={
         position:'start'
     };
@@ -59,12 +59,11 @@ let GameMethods=function(idBoard){
         {name: '1 min', value: 60},
         {name: '2 mins', value: 120}
     ];
-    let handler=this;
     let clickedSquares;
     let numberOfAvailableCapture=0,numberOfGoodCapture=0;
     let boardEvents=new BoardEvents(idBoard,cfg);
     let fens;
-    let fensLenght;
+    let fensLength;
     let blockBoard=function(){
         boardEvents.clearBoard();
     };
@@ -80,13 +79,13 @@ let GameMethods=function(idBoard){
     this.isTimeGame=function(level,type){
         return type===0;
     };
-    this.gameTime=function(level,type){
+    this.getGameTime=function(level,type){
         return type*1000;
     };
-    this.interval=function(){
+    this.getInterval=function(){
         return 1000;
     };
-    this.onCloseToEndTime=function(){
+    this.getOnCloseToEndTime=function(){
         return 10000;
     };
     let onClickSquare=function(squareEl,index){
@@ -108,7 +107,7 @@ let GameMethods=function(idBoard){
         }
     };
     let newPosition=function(){
-        let nr=Math.floor((Math.random() * fensLenght));
+        let nr=Math.floor((Math.random() * fensLength));
         boardEvents.load(fens[nr],onClickSquare);
         clickedSquares=[];
         numberOfGoodCapture=0;
@@ -116,7 +115,7 @@ let GameMethods=function(idBoard){
     };
     this.onStart=function(level){
         fens=level==='easy'?easyFens:level==='medium'?mediumFens:hardFens;
-        fensLenght=fens.length;
+        fensLength=fens.length;
         numberOfAvailableCapture=0;
         numberOfGoodCapture=0;
         while(numberOfAvailableCapture===numberOfGoodCapture){

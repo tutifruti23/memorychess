@@ -1,5 +1,5 @@
-function GameController() {
-    let gameMethods = new GameMethods('board');
+function GameController(_gameMethods) {
+    let gameMethods = _gameMethods;
     let game = new Game();
     levelAndType.levels =gameMethods.levels;
     levelAndType.types = gameMethods.types;
@@ -30,11 +30,11 @@ function GameController() {
             let type = gameMethods.types[gameProperties.gameType].value;
             gameProperties.gameStatus = 1;
             game.startGame(gameMethods.isTimeGame(level,type), {
-                time:gameMethods.gameTime(level,type),
+                time:gameMethods.getGameTime(level,type),
                 onTime: onTime,
-                timeCloseEnd:gameMethods.onCloseToEndTime(level,type),
+                timeCloseEnd:gameMethods.getOnCloseToEndTime(level,type),
                 onCloseToEnd:function(){ onCloseToEnd(level,type)},
-                interval:gameMethods.interval(level,type),
+                interval:gameMethods.getInterval(level,type),
                 onStart:function(){ onStart(level,type)},
                 onEnd: function(){ onEnd(level,type)},
             });
