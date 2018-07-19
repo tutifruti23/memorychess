@@ -10,19 +10,13 @@ let BoardEventsMatesInOne=function(idBoard){
             return false;
         }
     };
-
     let onDrop = function(source, target) {
-        // see if the move is legal
         let move = game.move({
             from: source,
             to: target,
             promotion: 'q' // NOTE: always promote to a queen for example simplicity
         });
-
-        // illegal move
         if (move === null) return 'snapback';
-
-
     };
     this.newPosition=function(){
         let nr=Math.floor((Math.random() * handler.fensLength));
@@ -31,10 +25,7 @@ let BoardEventsMatesInOne=function(idBoard){
         board.orientation(game.turn()==='w'?'white':'black');
         board.position(position);
     };
-
-// update the board position after the piece snap
-// for castling, en passant, pawn promotion
-    var onSnapEnd = function() {
+    let onSnapEnd = function() {
         if(game.in_checkmate())
             gameProperties.gameScore++;
         handler.newPosition();
@@ -45,7 +36,7 @@ let BoardEventsMatesInOne=function(idBoard){
         position: 'start',
         onDragStart: onDragStart,
         onDrop: onDrop,
-        onSnapEnd: onSnapEnd
+        onSnapEnd: onSnapEnd,
     };
     this.clearBoard=function(){
         board = ChessBoard(idBoard);
@@ -69,9 +60,6 @@ let GameMethodsMateInOne=function(idBoard){
     ];
     let boardEvents=new BoardEventsMatesInOne(idBoard);
     let fensLength;
-    this.onStart=function(){
-        console.log('start');
-    };
     this.onEnd=function(){
 
     };
@@ -79,7 +67,7 @@ let GameMethodsMateInOne=function(idBoard){
         console.log('bliski koniec');
     };
     this.isTimeGame=function(level,type){
-        return type===0;
+        return type!==0;
     };
     this.getGameTime=function(level,type){
         return type*1000;

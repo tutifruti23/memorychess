@@ -1,12 +1,14 @@
 let Game=function(){
     let handler=this;
     let timer;
+    let parameters;
     this.inProgress=false;
-    this.startGame=function(noTime,params){
+    this.startGame=function(isTimeGame,params){
+        parameters=params;
         if(!handler.inProgress){
             handler.inProgress=true;
             params.onStart();
-            if(!noTime)
+            if(isTimeGame)
                 timeGame(params);
         }
     };
@@ -17,7 +19,7 @@ let Game=function(){
             timeCloseEnd:params['timeCloseEnd'],
             onCloseToEnd:params['onCloseToEnd'],
             interval:params['interval'],
-            onEnd:function(){handler.endOfGame(params['onEnd'])}
+            onEnd:handler.endOfGame
         };
         timer=new Timer(cfg);
         timer.start();
@@ -27,10 +29,10 @@ let Game=function(){
         if(timer!==undefined)
             timer.stop();
     };
-    this.endOfGame=function(exec){
+    this.endOfGame=function(){
         handler.newGame();
         gameProperties.endOfGame();
-        if(exec!==undefined)
-            exec();
+        if(parameters['onEnd']!==undefined)
+            parameters['onEnd']();
     };
 };

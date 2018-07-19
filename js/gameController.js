@@ -12,7 +12,8 @@ function GameController(_gameMethods) {
         if(gameMethods.onCloseToEnd!==undefined)
             gameMethods.onCloseToEnd(level,type);
     };
-    let onEnd = function (level,type) {
+    let onEnd1 = function (level,type) {
+        console.log('und');
         if(gameMethods.onEnd!==undefined)
             gameMethods.onEnd(level,type);
     };
@@ -36,7 +37,7 @@ function GameController(_gameMethods) {
                 onCloseToEnd:function(){ onCloseToEnd(level,type)},
                 interval:gameMethods.getInterval(level,type),
                 onStart:function(){ onStart(level,type)},
-                onEnd: function(){ onEnd(level,type)},
+                onEnd: function(){ onEnd1(level,type)},
             });
         }
     });

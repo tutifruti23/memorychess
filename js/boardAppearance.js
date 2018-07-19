@@ -67,9 +67,6 @@ let GameMethodsAllCaptures=function(idBoard){
     let blockBoard=function(){
         boardEvents.clearBoard();
     };
-    this.onStart=function(){
-        console.log('start');
-    };
     this.onEnd=function(){
         blockBoard();
     };
@@ -77,7 +74,7 @@ let GameMethodsAllCaptures=function(idBoard){
         console.log('bliski koniec');
     };
     this.isTimeGame=function(level,type){
-        return type===0;
+        return type!==0;
     };
     this.getGameTime=function(level,type){
         return type*1000;

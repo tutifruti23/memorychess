@@ -9,12 +9,12 @@
     <link href="https://fonts.googleapis.com/css?family=Titillium+Web:400,600,700" rel="stylesheet">
     <link rel="stylesheet" href="css/chessboard.css" />
     <link rel="stylesheet" href="css/szablon.css" />
+    <link rel="stylesheet" href="css/spareChess.css" />
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js" integrity="sha384-cs/chFZiN24E4KMATLdqdvsezGxaGsi4hLGOzlXwp5UZB1LY//20VyM2taTB4QvJ" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js" integrity="sha384-uefMccjFJAIv6A+rW+L4AHf99KvxDjWSu1z9VI8SKNVmz4sk7buKt/6v9KI65qnm" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
     <script src="js/chessboard.js"></script>
-    <script src="js/binding.js"></script>
     <script src="js/easy.js"></script>
     <script src="js/medium.js"></script>
     <script src="js/hard.js"></script>
@@ -22,9 +22,8 @@
     <script src="js/timer.js"></script>
     <script src="js/game.js"></script>
     <script src="js/matesInOne.js"></script>
+    <script src="js/memory.js"></script>
     <script>
-
-
         <?php
             if(isset($_GET['game'])){
                 $game=$_GET['game'];
